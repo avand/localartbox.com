@@ -5,10 +5,53 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Art Box</title>
+  <link href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter:ital,wght@0,400;0,800;1,400;1,800" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-  <h1>Local Art Box</h1>
+  <div id="wrapper">
+    <div id="main">
+      <div class="inner">
+        <h1 id="hero-heading">Art Box</h1>
+        <p id="hero-description">A shoppable box of local art, available for you to take home from the comfort of your vacation.</p>
+        <div id="how-it-works" class="content-spaced">
+          <h2 class="section-heading">Here’s how it works…</h2>
+          <div class="frame">
+            <div class="big-number">1</div>
+            <h3>Browse a collection of hand-curated artwork from local artists</h3>
+            <p>We work closely with local artists and hand-pick art that represents their community and the destination you’re visiting.</p>
+            <img src="./example-1.webp" alt="Turpis egestas" width="100%">
+          </div>
+          <div class="frame">
+            <div class="big-number">2</div>
+            <h3>Find a piece you love</h3>
+            <p>If you find a piece that speaks to you, just scan the QR code on the back with your camera.</p>
+            <img src="./example-2.webp" alt="Turpis egestas" width="100%">
+          </div>
+          <div class="frame">
+            <div class="big-number">3</div>
+            <h3>Take it home with you</h3>
+            <p>Checkout securely and swiftly and take the artwork with you.</p>
+            <img src="./example-3.webp" alt="Turpis egestas" width="100%">
+          </div>
+        </div>
+        <div id="cta" class="content-spaced">
+          <h2 class="section-heading">Learn more</h2>
+          <div id="cta-buttons">
+            <button onclick="javascript:handleCta()">I’m an artist</button>
+            <button onclick="javascript:handleCta()">I’m a host</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function handleCta() {
+      alert('Coming soon!');
+    }
+  </script>
 </body>
 
 </html>
