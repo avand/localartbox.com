@@ -491,14 +491,15 @@ p spoiler-text {
   font-size: 0.9em;
   margin-left: auto;
   margin-right: auto;
-  color: black;
+  color: rgb(62, 62, 62);
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   backdrop-filter: blur(2px);
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.8);
   padding: 1em;
+  line-height: 1.4;
 }
 
 #how-it-works img,
@@ -672,7 +673,7 @@ p spoiler-text {
 
 @media (max-width: 736px) {
   html {
-    font-size: 10pt;
+    font-size: 11pt;
   }
 
   #main > .inner {
@@ -826,11 +827,11 @@ section {
   text-decoration: none;
 }
 
-.button-artist:after {
+.button-52.button-artist:after {
   background-color: #ffe54c;
 }
 
-.button-host:after {
+.button-52.button-host:after {
   background-color: #ff974c;
 }
 
