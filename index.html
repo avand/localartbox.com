@@ -13,45 +13,67 @@
   <div id="wrapper">
     <div id="main">
       <div class="inner">
-        <h1 id="hero-heading">Art Box</h1>
-        <p id="hero-description">A shoppable box of local art, available for you to take home from the comfort of your vacation.</p>
-        <div id="how-it-works" class="content-spaced">
+        <div id="hero">
+          <h1 id="hero-heading">Art Box</h1>
+          <p id="hero-description">A shoppable box of local art, available for you to take home from the comfort of your vacation.</p>
+        </div>
+
+        <section id="how-it-works" class="content-spaced">
           <h2 class="section-heading">Here’s how it works…</h2>
           <div class="frame">
             <div class="big-number">1</div>
             <h3>Browse a collection of hand-curated artwork from local artists</h3>
-            <p>We work closely with local artists and hand-pick art that represents their community and the destination you’re visiting.</p>
-            <img src="./example-1.webp" alt="Turpis egestas" width="100%">
+            <div class="how-it-works-image">
+              <p>We work closely with local artists and hand-pick art that represents their community and the destination you’re visiting.</p>
+              <img src="./example-1.webp" alt="Turpis egestas" width="100%">
+            </div>
           </div>
           <div class="frame">
             <div class="big-number">2</div>
             <h3>Find a piece you love</h3>
-            <p>If you find a piece that speaks to you, just scan the QR code on the back with your camera.</p>
-            <img src="./example-2.webp" alt="Turpis egestas" width="100%">
+            <div class="how-it-works-image">
+              <p>If you find a piece that speaks to you, just scan the QR code on the back with your camera.</p>
+              <img src="./example-2.webp" alt="Turpis egestas" width="100%">
+            </div>
           </div>
           <div class="frame">
             <div class="big-number">3</div>
             <h3>Take it home with you</h3>
-            <p>Checkout securely and swiftly and take the artwork with you.</p>
-            <img src="./example-3.webp" alt="Turpis egestas" width="100%">
+            <div class="how-it-works-image">
+              <p>Checkout securely and swiftly and take the artwork with you.</p>
+              <img src="./example-3.webp" alt="Turpis egestas" width="100%">
+            </div>
           </div>
-        </div>
-        <div id="cta" class="content-spaced">
+        </section>
+
+        <section id="testimonials" class="content-spaced">
+          <h2 class="section-heading">Word on the street</h2>
+          <div class="testimonial frame">
+            <img src="./darcy.jpg" class="testimonial-picture">
+            <div class="testimonial-quote">”It’s genius!”</div>
+            <div class="testimonial-author">Darcy, former fine art consultant</div>
+          </div>
+        </section>
+
+        <section id="cta" class="content-spaced">
           <h2 class="section-heading">Learn more</h2>
           <div id="cta-buttons">
-            <button onclick="javascript:handleCta()">I’m an artist</button>
-            <button onclick="javascript:handleCta()">I’m a host</button>
+            <button class="button-52 button-artist" role="button">I’m an artist</button>
+            <button class="button-52 button-host" role="button">I’m a host</button>
           </div>
-        </div>
+        </section>
       </div>
     </div>
-  </div>
 
-  <script>
-    function handleCta() {
-      alert('Coming soon!');
-    }
-  </script>
+    <footer class="content-spaced">
+      <p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfpfGzgEi7ks5on2peX6SI7CQNIpRPqAOZ7g8N4gPkZhADosQ/viewform?usp=sf_link" target="_blank">Customer service</a> &middot;
+        <a href="./returns.html">Returns</a>
+      </p>
+
+      <p>&copy; 2024 Art Box</p>
+    </footer>
+  </div>
 </body>
 
 </html>
