@@ -428,11 +428,6 @@ p spoiler-text {
   margin-top: 1rem;
 }
 
-#hero-heading.sub-hero {
-  font-size: 3em;
-  margin-bottom: 0;
-}
-
 #hero-description {
   color: #696969;
   font-size: 1.3em;
@@ -863,14 +858,19 @@ footer {
   text-align: center;
 }
 
-#hosts {
-  margin-top: 2em;
+.sub-page h1#hero-heading {
+  font-size: 3em;
+  margin-bottom: 0;
 }
-#hosts .section-heading {
+
+.sub-page .section-heading {
   font-size: 4em;
 }
-#hosts ul {
+
+.sub-page section {
+  margin-top: 2em;
 }
-#hosts .frame {
+
+.text-start {
   text-align: left;
 }
