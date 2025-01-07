@@ -475,25 +475,6 @@ p spoiler-text {
   color: #545454;
 }
 
-.how-it-works-image {
-  position: relative;
-}
-
-.how-it-works-image p {
-  font-size: 0.9em;
-  margin-left: auto;
-  margin-right: auto;
-  color: rgb(62, 62, 62);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  backdrop-filter: blur(2px);
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 1em;
-  line-height: 1.4;
-}
-
 #how-it-works img,
 .frame {
   border-radius: 0.375rem;
