@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QEB41WQ5WR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-QEB41WQ5WR');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    {{ page.title }} · Art Box
+  </title>
+  <link href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter:ital,wght@0,400;0,800;1,400;1,800" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/style/style.css">
+  <meta property="og:title" content="Art Box" />
+  <meta property="og:url" content="https://localartbox.com" />
+  <meta property="og:image" content="/example-1.jpg" />
+  <meta property="og:description" content="A shoppable box of local art, available for you to take home from the comfort of your vacation." />
+</head>
+
+<body>
+  <div id="wrapper">
+    {{ content }}
+  </div>
+
+  <footer class="content-spaced">
+    <p>
+      <a href="/">Home</a> &middot;
+      <a href="/about">About</a> &middot;
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfpfGzgEi7ks5on2peX6SI7CQNIpRPqAOZ7g8N4gPkZhADosQ/viewform?usp=sf_link" target="_blank">Customer service</a> &middot;
+      <a href="/returns">Returns</a>
+    </p>
+
+    <p>&copy; 2025 Art Box</p>
+  </footer>
+</body>
+
+</html>
