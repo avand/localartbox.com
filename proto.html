@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Cube</title>
+  <style>
+    .cube-container {
+      --width: 240px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: calc(var(--width) * 1.5);
+      margin: 0;
+      perspective: 1000px;
+      color: #2b2b2b;
+      letter-spacing: -0.25rem;
+      width: 100%;
+      font-size: 7em;
+      line-height: 0.8em;
+      font-weight: 800;
+      font-family: Arial, Helvetica, sans-serif;
+      box-sizing: border-box;
+    }
+
+    .cube {
+      position: relative;
+      width: var(--width);
+      transform-style: preserve-3d;
+      animation: rotateCube 20s infinite linear;
+    }
+
+    @keyframes rotateCube {
+      from {
+        transform: rotateX(-6deg) rotateY(0deg);
+      }
+
+      to {
+        transform: rotateX(-6deg) rotateY(360deg);
+      }
+    }
+
+    .face {
+      position: absolute;
+      width: var(--width);
+      height: calc(var(--width) / 1.5);
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      font-weight: bold;
+      color: #333;
+      border: 1px solid #333;
+      background: linear-gradient(rgb(166, 166, 166), white);
+
+    }
+
+    .front-left {
+      transform: rotateY(-90deg) translateZ(calc(var(--width) / 2));
+    }
+
+    .front-right {
+      transform: rotateY(0deg) translateZ(calc(var(--width) / 2));
+    }
+
+    .back-left {
+      transform: rotateY(90deg) translateZ(calc(var(--width) / 2));
+    }
+
+    .back-right {
+      transform: rotateY(180deg) translateZ(calc(var(--width) / 2));
+    }
+  </style>
+</head>
+
+<body>
+  <div class="cube-container">
+    <div class="cube">
+      <div class="face front-left">Art</div>
+      <div class="face front-right">Box</div>
+      <div class="face back-left">Art</div>
+      <div class="face back-right">Box</div>
+    </div>
+  </div>
+</body>
+
+</html>
