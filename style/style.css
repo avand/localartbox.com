@@ -379,6 +379,7 @@ main {
   font-weight: 800;
   text-transform: uppercase;
   margin: 32px 0;
+  text-align: center;
 }
 
 .testimonial-picture {
@@ -451,4 +452,10 @@ footer {
   padding: 3em 2em;
   color: #8b8b8b;
   text-align: center;
+}
+
+blockquote {
+  border-left: 2px solid #b6b6b6;
+  padding-left: 10px;
+  margin-left: 10px;
 }
