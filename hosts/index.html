@@ -6,7 +6,7 @@ layout: default
 <div class="container-xxl">
   <div class="row">
     <div class="col">
-      <h1 class="ab-heading text-center">Distinguish your rental with fine art from local artists.</h1>
+      <h1 class="ab-heading text-center my-4">Distinguish your rental with fine art from local artists.</h1>
     </div>
   </div>
   <div class="row">
@@ -53,17 +53,22 @@ layout: default
   </div>
 </div>
 
-<div class="container">
-  <div class="row my-5">
+<div class="container my-5">
+  <div class="row">
     <div class="col">
-      <h2 class="ab-heading">Offer your guests a unique experience.</h2>
-      <p>
-        Like a collection of vinyl records, an Art Box is a currated collection of fine art that guests can admire.
-        When they connect with a piece, they can scan a QR code to buy, and take it home with them as a memento of their trip.
+      <h2 class="ab-heading mb-3">Offer your guests a unique experience.</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-7 col-lg-8">
+      <p class="ab-sales-copy">
+        Art Box is a currated collection of fine art that your guests can browse and admire.
+        When they find a piece they love, they scan a QR code to buy it, and take it home
+        with them as a memento of their trip and a reminder of your property.
       </p>
     </div>
-    <div class="col">
-      <img src="../images/example-3.jpg" alt="..." class="w-100 rounded-4 shadow">
+    <div class="col-5 col-lg-4">
+      <img src="../images/example-3.jpg" alt="Art Box being scanned by a guest" class="w-100 rounded-4 shadow" data-bs-toggle="modal" data-bs-target="#guest-checking-out-modal" />
     </div>
   </div>
 </div>
@@ -72,11 +77,15 @@ layout: default
   <div class="container">
     <div class="row">
       <div class="col">
-        <h2 class="ab-heading">Support local art.</h2>
+        <h2 class="ab-heading mb-3">Support local art.</h2>
 
-        <p>
-          Art Box licenses artwork from local painters and photographers. Each giclée print is presented at
-          archival-quality and comes pre-matted for easy framing.
+        <p class="ab-sales-copy">
+          Art Box licenses artwork from local painters and photographers. Each giclée print is presented with
+          archival-materials and comes pre-matted for easy framing.
+        </p>
+
+        <p class="ab-sales-copy">
+          10% of sales support local art programs in Mariposa, Oakhurst, and Groveland.
         </p>
       </div>
     </div>
@@ -84,78 +93,47 @@ layout: default
 
   <div class="infinite-carousel">
     <div class="group">
-      <div class="slide shadow rounded">1</div>
-      <div class="slide shadow rounded">2</div>
-      <div class="slide shadow rounded">3</div>
-      <div class="slide shadow rounded">4</div>
-      <div class="slide shadow rounded">5</div>
-      <div class="slide shadow rounded">6</div>
-      <div class="slide shadow rounded">7</div>
-      <div class="slide shadow rounded">8</div>
-      <div class="slide shadow rounded">9</div>
-      <div class="slide shadow rounded">10</div>
-      <div class="slide shadow rounded">11</div>
-      <div class="slide shadow rounded">12</div>
-      <div class="slide shadow rounded">13</div>
-      <div class="slide shadow rounded">14</div>
-      <div class="slide shadow rounded">15</div>
-      <div class="slide shadow rounded">16</div>
-      <div class="slide shadow rounded">17</div>
-      <div class="slide shadow rounded">18</div>
-      <div class="slide shadow rounded">19</div>
+      {% include artwork_example_slides.html %}
     </div>
-    <!-- Add `aria-hidden` to hide the duplicated slides from screen readers. -->
     <div aria-hidden class="group">
-      <div class="slide shadow rounded">1</div>
-      <div class="slide shadow rounded">2</div>
-      <div class="slide shadow rounded">3</div>
-      <div class="slide shadow rounded">4</div>
-      <div class="slide shadow rounded">5</div>
-      <div class="slide shadow rounded">6</div>
-      <div class="slide shadow rounded">7</div>
-      <div class="slide shadow rounded">8</div>
-      <div class="slide shadow rounded">9</div>
-      <div class="slide shadow rounded">10</div>
-      <div class="slide shadow rounded">11</div>
-      <div class="slide shadow rounded">12</div>
-      <div class="slide shadow rounded">13</div>
-      <div class="slide shadow rounded">14</div>
-      <div class="slide shadow rounded">15</div>
-      <div class="slide shadow rounded">16</div>
-      <div class="slide shadow rounded">17</div>
-      <div class="slide shadow rounded">18</div>
-      <div class="slide shadow rounded">19</div>
-    </div>
-  </div>
-
-  <div class="text-center">
-    <div class="ribbon mx-auto ab-impact">
-      10% of sales support local art programs
+      {% include artwork_example_slides.html %}
     </div>
   </div>
 </div>
 
-<hr class="my-5" />
-
 <div class="container">
   <div class="row my-5">
     <div class="col">
-      <h2 class="ab-heading">How does it work?</h2>
-      <p>
-        Simply order a box, and Art Box takes care of the rest. We’ll mail the box to your property
-        and replenish it when inventory gets low automatically. We ensure artists get paid for their work,
+      <h2 class="ab-heading mb-3">How does it work?</h2>
+      <p class="ab-sales-copy">
+        Simply order a box and Art Box does the rest. We’ll mail the box to your property,
+        replenish it when inventory gets low, ensure artists get paid for their work,
         cover any theft, and handle returns.
       </p>
 
-      <ol>
+      <ol class="ab-sales-copy">
         <li>Order a box</li>
         <li>Put it on display</li>
         <li>Add new art as it sells</li>
       </ol>
     </div>
 
-    <div>
+    <div class="my-auto mt-2">
       <a class="btn btn-lg btn-warning ab-impact" href="https://docs.google.com/forms/d/e/1FAIpQLSdaWEZxXPZoucQVDPC7Pt8SuF5SKwltNlN_B5k2GZB7TF_ujw/viewform?usp=sf_link">Order a box</a>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="guest-checking-out-modal" tabindex="-1" aria-labelledby="guest-checking-out-modal-label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="guest-checking-out-modal-label">Guest Checking Out</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="../images/example-3.jpg" alt="Art Box being scanned by a guest" class="w-100" />
+      </div>
     </div>
   </div>
 </div>

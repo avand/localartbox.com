@@ -9,11 +9,6 @@ body {
   background-size: 1600px 2300px;
 }
 
-spoiler-text.active {
-  color: #ffffff;
-  cursor: text;
-}
-
 a {
   color: inherit;
   text-decoration: underline;
@@ -22,6 +17,11 @@ a {
 
 a[onclick]:not([href]) {
   cursor: pointer;
+}
+
+.btn-lg.ab-impact {
+  font-size: 1.6em;
+  padding: 0.6em 1em;
 }
 
 #hero {
@@ -34,6 +34,22 @@ a[onclick]:not([href]) {
 .ab-heading,
 #hero-description {
   text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 6px 16px rgba(0, 0, 0, 0.04);
+  margin: 0;
+}
+
+.ab-heading {
+  color: #2b2b2b;
+  letter-spacing: -0.05em;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.ab-sales-copy {
+  color: #5f5f5f;
+  font-size: 1.4em;
+  line-height: 1.6;
+  font-family: "Bricolage Grotesque", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
+    "Apple Color Emoji", "Segoe UI Emoji";
 }
 
 h1.ab-heading {
@@ -44,13 +60,16 @@ h2.ab-heading {
   font-size: 3em;
 }
 
-.ab-heading {
-  color: #2b2b2b;
-  letter-spacing: -0.2rem;
-  width: 100%;
-  font-size: 5em;
-  line-height: 1.1;
-  font-weight: 800;
+@media (max-width: 650px) {
+  h1.ab-heading {
+    font-size: 3em;
+  }
+  h2.ab-heading {
+    font-size: 2em;
+  }
+  .ab-sales-copy {
+    font-size: 1.2em;
+  }
 }
 
 .ab-heading a {
@@ -483,17 +502,19 @@ blockquote {
 
 .infinite-carousel .slide {
   width: 100%;
-  color: transparent;
-  padding: 20px;
-  font-size: xx-large;
-  justify-content: center;
-  align-items: center;
+  color: white;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  font-weight: 800;
+  text-shadow: 0 1px 0 black, 0 3px 6px rgba(0, 0, 0, 0.5);
+  align-items: flex-end;
   width: 150px;
-  height: 200px;
-}
-
-.infinite-carousel .slide {
+  height: 220px;
   background-size: cover;
+  display: flex;
+  border: 10px solid white;
 }
 
 .infinite-carousel .slide:nth-child(1) {
@@ -530,10 +551,10 @@ blockquote {
   background-image: url(../hosts/art-examples/melinda-abeles-half-dome-color.jpeg);
 }
 .infinite-carousel .slide:nth-child(12) {
-  background-image: url(../hosts/art-examples/lura-smith-morning-radiance.jpeg);
+  background-image: url(../hosts/art-examples/franka-m-gabler-el-capitan-reflection.jpeg);
 }
 .infinite-carousel .slide:nth-child(13) {
-  background-image: url(../hosts/art-examples/franka-m-gabler-el-capitan-reflection.jpeg);
+  background-image: url(../hosts/art-examples/lura-smith-morning-radiance.jpeg);
 }
 .infinite-carousel .slide:nth-child(14) {
   background-image: url(../hosts/art-examples/melinda-abeles-yosemite-falls-2.jpeg);
@@ -559,13 +580,12 @@ blockquote {
 }
 
 .infinite-carousel .group {
-  /* ... */
-  will-change: transform; /* We should be nice to the browser - let it know what we're going to animate. */
+  --gap: 30px;
+  will-change: transform;
   animation: scrolling 100s linear infinite;
   display: flex;
-  gap: 20px;
-  /* Add padding to the right to create a gap between the last and first card. */
-  padding-right: 20px;
+  gap: var(--gap);
+  padding-right: var(--gap);
 }
 
 @keyframes scrolling {
@@ -575,38 +595,4 @@ blockquote {
   100% {
     transform: translateX(-100%);
   }
-}
-
-/* HTML: <div class="ribbon">Your text content</div> */
-.ribbon {
-  font-size: 14px;
-  color: #000000;
-}
-.ribbon {
-  --s: 1.8em; /* the ribbon size */
-  --d: 0.8em; /* the depth */
-  --c: 0.8em; /* the cutout part */
-
-  padding: 0 calc(var(--s) + 0.5em) var(--d);
-  line-height: 1.8;
-  background: conic-gradient(at left var(--s) bottom var(--d), #0000 25%, #0008 0 37.5%, #0004 0) 0 /50% 100% no-repeat,
-    conic-gradient(at right var(--s) bottom var(--d), #0004 62.5%, #0008 0 75%, #0000 0) 100%/50% 100% no-repeat;
-  clip-path: polygon(
-    0 var(--d),
-    var(--s) var(--d),
-    var(--s) 0,
-    calc(100% - var(--s)) 0,
-    calc(100% - var(--s)) var(--d),
-    100% var(--d),
-    calc(100% - var(--c)) calc(50% + var(--d) / 2),
-    100% 100%,
-    calc(100% - var(--s) - var(--d)) 100%,
-    calc(100% - var(--s) - var(--d)) calc(100% - var(--d)),
-    calc(var(--s) + var(--d)) calc(100% - var(--d)),
-    calc(var(--s) + var(--d)) 100%,
-    0 100%,
-    var(--c) calc(50% + var(--d) / 2)
-  );
-  background-color: var(--bs-warning); /* the main color */
-  width: fit-content;
 }
