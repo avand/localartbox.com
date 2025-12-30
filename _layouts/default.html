@@ -5,6 +5,7 @@
   {% include google_analytics.html %}
   {% include fathom_analytics.html %}
   {% include posthog.html %}
+  {% include bootstrap.html %}
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>
@@ -22,6 +23,26 @@
 </head>
 
 <body>
+  <nav class="navbar navbar-expand-sm bg-dark border-bottom border-body" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand ab-impact" href="/">Art Box</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link {% if page.url == '/artists/' %}active{% endif %}" {% if page.url == '/artists' %}aria-current="page" {% endif %} href="/artists">Artists</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if page.url == '/hosts/' %}active{% endif %}" {% if page.url == '/hosts/' %}aria-current="page" {% endif %} href="/hosts">Hosts</a>
+          </li>
+        </ul>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdaWEZxXPZoucQVDPC7Pt8SuF5SKwltNlN_B5k2GZB7TF_ujw/viewform?usp=sf_link" target="_blank" class="btn btn-warning ab-impact" type="submit">Order a Box</a>
+      </div>
+    </div>
+  </nav>
+
   <main>
     {{ content }}
   </main>

@@ -24,10 +24,6 @@ a[onclick]:not([href]) {
   cursor: pointer;
 }
 
-main {
-  padding: 0 12px;
-}
-
 #hero {
   padding: 48px 0 32px;
   margin-bottom: 32px;
@@ -35,29 +31,37 @@ main {
   text-align: center;
 }
 
-#hero-heading,
+.ab-heading,
 #hero-description {
-  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.14), 0 6px 16px rgba(0, 0, 0, 0.04);
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 6px 16px rgba(0, 0, 0, 0.04);
 }
 
-#hero-heading {
+h1.ab-heading {
+  font-size: 5em;
+}
+
+h2.ab-heading {
+  font-size: 3em;
+}
+
+.ab-heading {
   color: #2b2b2b;
-  letter-spacing: -0.25rem;
+  letter-spacing: -0.2rem;
   width: 100%;
-  font-size: 7em;
-  line-height: 0.875;
+  font-size: 5em;
+  line-height: 1.1;
   font-weight: 800;
 }
 
-#hero-heading a {
+.ab-heading a {
   text-decoration: none;
 }
 
-#hero-heading a:hover {
+.ab-heading a:hover {
   text-decoration: underline;
 }
 
-#hero-heading span.p:nth-child(n + 2) {
+.ab-heading span.p:nth-child(n + 2) {
   margin-top: 1rem;
 }
 
@@ -458,4 +462,151 @@ blockquote {
   border-left: 2px solid #b6b6b6;
   padding-left: 10px;
   margin-left: 10px;
+}
+
+.ab-impact {
+  line-height: 0.875;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.infinite-carousel {
+  margin: 0 auto;
+  padding: 20px 0;
+  overflow: hidden;
+  display: flex;
+}
+
+.infinite-carousel > * {
+  flex: 0 0 100%;
+}
+
+.infinite-carousel .slide {
+  width: 100%;
+  color: transparent;
+  padding: 20px;
+  font-size: xx-large;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 200px;
+}
+
+.infinite-carousel .slide {
+  background-size: cover;
+}
+
+.infinite-carousel .slide:nth-child(1) {
+  background-image: url(../hosts/art-examples/teresa-j-sharp-mercys-pathway.jpeg);
+}
+.infinite-carousel .slide:nth-child(2) {
+  background-image: url(../hosts/art-examples/santiago-palacio-half-dome.jpeg);
+}
+.infinite-carousel .slide:nth-child(3) {
+  background-image: url(../hosts/art-examples/franka-m-gabler-bridalveil-and-spring-foliage.jpeg);
+}
+.infinite-carousel .slide:nth-child(4) {
+  background-image: url(../hosts/art-examples/lisa-zylstra-el-capitan-in-color.jpeg);
+}
+.infinite-carousel .slide:nth-child(5) {
+  background-image: url(../hosts/art-examples/lura-smith-juggler.jpeg);
+}
+.infinite-carousel .slide:nth-child(6) {
+  background-image: url(../hosts/art-examples/melinda-abeles-el-cap-autumn.jpeg);
+}
+.infinite-carousel .slide:nth-child(7) {
+  background-image: url(../hosts/art-examples/teresa-j-sharp-below-the-falls.jpeg);
+}
+.infinite-carousel .slide:nth-child(8) {
+  background-image: url(../hosts/art-examples/franka-m-gabler-half-dome-and-merced-river.jpeg);
+}
+.infinite-carousel .slide:nth-child(9) {
+  background-image: url(../hosts/art-examples/lisa-zylstra-walk-amount-the-giants.jpeg);
+}
+.infinite-carousel .slide:nth-child(10) {
+  background-image: url(../hosts/art-examples/lura-smith-standing-stone.jpeg);
+}
+.infinite-carousel .slide:nth-child(11) {
+  background-image: url(../hosts/art-examples/melinda-abeles-half-dome-color.jpeg);
+}
+.infinite-carousel .slide:nth-child(12) {
+  background-image: url(../hosts/art-examples/lura-smith-morning-radiance.jpeg);
+}
+.infinite-carousel .slide:nth-child(13) {
+  background-image: url(../hosts/art-examples/franka-m-gabler-el-capitan-reflection.jpeg);
+}
+.infinite-carousel .slide:nth-child(14) {
+  background-image: url(../hosts/art-examples/melinda-abeles-yosemite-falls-2.jpeg);
+}
+.infinite-carousel .slide:nth-child(15) {
+  background-image: url(../hosts/art-examples/teresa-j-sharp-yosemite-falls.jpeg);
+}
+.infinite-carousel .slide:nth-child(16) {
+  background-image: url(../hosts/art-examples/lisa-zylstra-valley-shadows.jpeg);
+}
+.infinite-carousel .slide:nth-child(17) {
+  background-image: url(../hosts/art-examples/teresa-j-sharp-harlequin-lupine.jpeg);
+}
+.infinite-carousel .slide:nth-child(18) {
+  background-image: url(../hosts/art-examples/santiago-palacio-yosmite-falls.jpeg);
+}
+.infinite-carousel .slide:nth-child(19) {
+  background-image: url(../hosts/art-examples/frank-m-gabler-misty-sunrise.jpeg);
+}
+
+.infinite-carousel:hover .group {
+  animation-play-state: paused;
+}
+
+.infinite-carousel .group {
+  /* ... */
+  will-change: transform; /* We should be nice to the browser - let it know what we're going to animate. */
+  animation: scrolling 100s linear infinite;
+  display: flex;
+  gap: 20px;
+  /* Add padding to the right to create a gap between the last and first card. */
+  padding-right: 20px;
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* HTML: <div class="ribbon">Your text content</div> */
+.ribbon {
+  font-size: 14px;
+  color: #000000;
+}
+.ribbon {
+  --s: 1.8em; /* the ribbon size */
+  --d: 0.8em; /* the depth */
+  --c: 0.8em; /* the cutout part */
+
+  padding: 0 calc(var(--s) + 0.5em) var(--d);
+  line-height: 1.8;
+  background: conic-gradient(at left var(--s) bottom var(--d), #0000 25%, #0008 0 37.5%, #0004 0) 0 /50% 100% no-repeat,
+    conic-gradient(at right var(--s) bottom var(--d), #0004 62.5%, #0008 0 75%, #0000 0) 100%/50% 100% no-repeat;
+  clip-path: polygon(
+    0 var(--d),
+    var(--s) var(--d),
+    var(--s) 0,
+    calc(100% - var(--s)) 0,
+    calc(100% - var(--s)) var(--d),
+    100% var(--d),
+    calc(100% - var(--c)) calc(50% + var(--d) / 2),
+    100% 100%,
+    calc(100% - var(--s) - var(--d)) 100%,
+    calc(100% - var(--s) - var(--d)) calc(100% - var(--d)),
+    calc(var(--s) + var(--d)) calc(100% - var(--d)),
+    calc(var(--s) + var(--d)) 100%,
+    0 100%,
+    var(--c) calc(50% + var(--d) / 2)
+  );
+  background-color: var(--bs-warning); /* the main color */
+  width: fit-content;
 }
