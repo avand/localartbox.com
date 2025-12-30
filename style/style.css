@@ -1,5 +1,6 @@
 body {
-  font-family: "Inter", sans-serif;
+  color: #5f5f5f;
+  font-size: 1.4em;
   line-height: 1.6;
   min-height: var(--viewport-height);
   min-width: 320px;
@@ -7,6 +8,8 @@ body {
   word-wrap: break-word;
   background: #f0efef url(./paper.jpg) top center repeat;
   background-size: 1600px 2300px;
+  font-family: "Bricolage Grotesque", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
+    "Apple Color Emoji", "Segoe UI Emoji";
 }
 
 a {
@@ -42,14 +45,14 @@ a[onclick]:not([href]) {
   letter-spacing: -0.05em;
   line-height: 1.2;
   font-weight: 800;
+  font-family: "Inter", sans-serif;
 }
 
-.ab-sales-copy {
-  color: #5f5f5f;
-  font-size: 1.4em;
-  line-height: 1.6;
-  font-family: "Bricolage Grotesque", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
-    "Apple Color Emoji", "Segoe UI Emoji";
+.ab-impact {
+  font-family: "Inter", sans-serif;
+  line-height: 0.875;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 h1.ab-heading {
@@ -61,13 +64,16 @@ h2.ab-heading {
 }
 
 @media (max-width: 650px) {
+  body {
+    font-size: 1.2em;
+  }
   h1.ab-heading {
     font-size: 3em;
   }
   h2.ab-heading {
     font-size: 2em;
   }
-  .ab-sales-copy {
+  .btn-lg.ab-impact {
     font-size: 1.2em;
   }
 }
@@ -483,12 +489,6 @@ blockquote {
   margin-left: 10px;
 }
 
-.ab-impact {
-  line-height: 0.875;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-
 .infinite-carousel {
   margin: 0 auto;
   padding: 20px 0;
@@ -518,61 +518,61 @@ blockquote {
 }
 
 .infinite-carousel .slide:nth-child(1) {
-  background-image: url(../hosts/art-examples/teresa-j-sharp-mercys-pathway.jpeg);
+  background-image: url(../images/art-examples/teresa-j-sharp-mercys-pathway.jpeg);
 }
 .infinite-carousel .slide:nth-child(2) {
-  background-image: url(../hosts/art-examples/santiago-palacio-half-dome.jpeg);
+  background-image: url(../images/art-examples/santiago-palacio-half-dome.jpeg);
 }
 .infinite-carousel .slide:nth-child(3) {
-  background-image: url(../hosts/art-examples/franka-m-gabler-bridalveil-and-spring-foliage.jpeg);
+  background-image: url(../images/art-examples/franka-m-gabler-bridalveil-and-spring-foliage.jpeg);
 }
 .infinite-carousel .slide:nth-child(4) {
-  background-image: url(../hosts/art-examples/lisa-zylstra-el-capitan-in-color.jpeg);
+  background-image: url(../images/art-examples/lisa-zylstra-el-capitan-in-color.jpeg);
 }
 .infinite-carousel .slide:nth-child(5) {
-  background-image: url(../hosts/art-examples/lura-smith-juggler.jpeg);
+  background-image: url(../images/art-examples/lura-smith-juggler.jpeg);
 }
 .infinite-carousel .slide:nth-child(6) {
-  background-image: url(../hosts/art-examples/melinda-abeles-el-cap-autumn.jpeg);
+  background-image: url(../images/art-examples/melinda-abeles-el-cap-autumn.jpeg);
 }
 .infinite-carousel .slide:nth-child(7) {
-  background-image: url(../hosts/art-examples/teresa-j-sharp-below-the-falls.jpeg);
+  background-image: url(../images/art-examples/teresa-j-sharp-below-the-falls.jpeg);
 }
 .infinite-carousel .slide:nth-child(8) {
-  background-image: url(../hosts/art-examples/franka-m-gabler-half-dome-and-merced-river.jpeg);
+  background-image: url(../images/art-examples/franka-m-gabler-half-dome-and-merced-river.jpeg);
 }
 .infinite-carousel .slide:nth-child(9) {
-  background-image: url(../hosts/art-examples/lisa-zylstra-walk-amount-the-giants.jpeg);
+  background-image: url(../images/art-examples/lisa-zylstra-walk-amount-the-giants.jpeg);
 }
 .infinite-carousel .slide:nth-child(10) {
-  background-image: url(../hosts/art-examples/lura-smith-standing-stone.jpeg);
+  background-image: url(../images/art-examples/lura-smith-standing-stone.jpeg);
 }
 .infinite-carousel .slide:nth-child(11) {
-  background-image: url(../hosts/art-examples/melinda-abeles-half-dome-color.jpeg);
+  background-image: url(../images/art-examples/melinda-abeles-half-dome-color.jpeg);
 }
 .infinite-carousel .slide:nth-child(12) {
-  background-image: url(../hosts/art-examples/franka-m-gabler-el-capitan-reflection.jpeg);
+  background-image: url(../images/art-examples/franka-m-gabler-el-capitan-reflection.jpeg);
 }
 .infinite-carousel .slide:nth-child(13) {
-  background-image: url(../hosts/art-examples/lura-smith-morning-radiance.jpeg);
+  background-image: url(../images/art-examples/lura-smith-morning-radiance.jpeg);
 }
 .infinite-carousel .slide:nth-child(14) {
-  background-image: url(../hosts/art-examples/melinda-abeles-yosemite-falls-2.jpeg);
+  background-image: url(../images/art-examples/melinda-abeles-yosemite-falls-2.jpeg);
 }
 .infinite-carousel .slide:nth-child(15) {
-  background-image: url(../hosts/art-examples/teresa-j-sharp-yosemite-falls.jpeg);
+  background-image: url(../images/art-examples/teresa-j-sharp-yosemite-falls.jpeg);
 }
 .infinite-carousel .slide:nth-child(16) {
-  background-image: url(../hosts/art-examples/lisa-zylstra-valley-shadows.jpeg);
+  background-image: url(../images/art-examples/lisa-zylstra-valley-shadows.jpeg);
 }
 .infinite-carousel .slide:nth-child(17) {
-  background-image: url(../hosts/art-examples/teresa-j-sharp-harlequin-lupine.jpeg);
+  background-image: url(../images/art-examples/teresa-j-sharp-harlequin-lupine.jpeg);
 }
 .infinite-carousel .slide:nth-child(18) {
-  background-image: url(../hosts/art-examples/santiago-palacio-yosmite-falls.jpeg);
+  background-image: url(../images/art-examples/santiago-palacio-yosmite-falls.jpeg);
 }
 .infinite-carousel .slide:nth-child(19) {
-  background-image: url(../hosts/art-examples/frank-m-gabler-misty-sunrise.jpeg);
+  background-image: url(../images/art-examples/frank-m-gabler-misty-sunrise.jpeg);
 }
 
 .infinite-carousel:hover .group {
